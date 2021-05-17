@@ -3548,7 +3548,7 @@ function _ShowVideo(account, game, zone, callback) {
   fallback: 1
  };
  console.log(local_options);
- window.applixirCallback = local_options.adStatusCb;
+ window.applixirCallback = callback;
  invokeApplixirVideoUnit(local_options);
 }
 function ___atomic_fetch_add_8(ptr, vall, valh, memmodel) {
