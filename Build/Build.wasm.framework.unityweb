@@ -3543,7 +3543,7 @@ function _ShowVideo(account, game, zone, callback) {
   zoneId: zone,
   accountId: account,
   gameId: game,
-  adStatusCb: callback,
+  adStatusCb: 4145,
   verbosity: 5,
   fallback: 1
  };
