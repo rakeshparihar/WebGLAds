@@ -3543,7 +3543,7 @@ function _ShowVideo(account, game, zone, callback) {
   zoneId: zone,
   accountId: account,
   gameId: game,
-  adStatusCb: ApplixirEventHandler,
+  adStatusCb: _adStatusCallbackX,
   verbosity: 5,
   fallback: 1
  };
