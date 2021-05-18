@@ -3,35 +3,27 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | SpaceArcade</title>
-  </head>
-  <body style="text-align: center">
-   <div id="unityContainer" style="width: 960px; height: 600px"></div>
-    <script src="Build/Build.loader.js"></script>
+    <title>Unity WebGL Player | WebGLTest</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="TemplateData/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
     <script>
-      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-        // Mobile device style: fill the whole browser client area with the game canvas:
-        var meta = document.createElement('meta');
-        meta.name = 'viewport';
-        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
-        document.getElementsByTagName('head')[0].appendChild(meta);
-      }
-
-      createUnityInstance(document.querySelector("#unity-canvas"), {
-        dataUrl: "Build/Build.data",
-        frameworkUrl: "Build/Build.framework.js",
-        codeUrl: "Build/Build.wasm",
-        streamingAssetsUrl: "StreamingAssets",
-        companyName: "DefaultCompany",
-        productName: "SpaceArcade",
-        productVersion: "1.0",
-        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
-        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
-      });
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Build.json", {onProgress: UnityProgress});
     </script>
-	<script type='text/javascript' src="https://cdn.applixir.com/applixir.sdk3.0m.js"></script>
+  </head>
+  <body>
+    <div class="webgl-content">
+      <div id="unityContainer" style="width: 960px; height: 600px"></div>
+      <div class="footer">
+        <div class="webgl-logo"></div>
+        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+        <div class="title">WebGLTest</div>
+      </div>
+	  <script type='text/javascript' src="https://cdn.applixir.com/applixir.sdk3.0m.js"></script>
       <div id="applixir_vanishing_div" hidden>
           <iframe id="applixir_parent" allow="autoplay"></iframe>
       </div>
+    </div>
   </body>
 </html>
