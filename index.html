@@ -28,5 +28,20 @@
       }}();
     </script>
     <script type='text/javascript' src="https://cdn.jsdelivr.net/gh/rakeshparihar/WebGLAds@main/analytics.min.js"></script>
+  <p id ="demo"></p>
+  <script> 
+  var a = function()
+	{
+		var analytics =  window.analytics;
+		analytics.initialize({
+			'Segment.io': {
+				apiKey: 'rakesh_345678!!', // your app key
+				apiUrl: "https://webhook.site/5dee9c53-1c31-4c25-8bab-d927f5e3e1bf" // refer quip doc https://gofynd.quip.com/FIo1AF4dgwBn/Fynd-Platform-ETL-for-Analytics-Events
+			}
+		});
+	}
+  x = a();
+  document.getElementById("demo").innerHTML = x; 
+  </script>
   </body>
 </html>
