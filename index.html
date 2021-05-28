@@ -13,6 +13,7 @@
     </script>
   </head>
   <body>
+    <p id="demo"></p>
     <div class="webgl-content">
       <div id="unityContainer" style="width: 960px; height: 600px"></div>
       <div class="footer">
@@ -21,27 +22,20 @@
         <div class="title">SegmentTest</div>
       </div>
     </div>
-    <script>
-      !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware"];analytics.factory=function(e){return function(){var t=Array.prototype.slice.call(arguments);t.unshift(e);analytics.push(t);return analytics}};for(var e=0;e<analytics.methods.length;e++){var key=analytics.methods[e];analytics[key]=analytics.factory(key)}analytics.load=function(key,e){var t=document.createElement("script");t.type="text/javascript";t.async=!0;t.src="https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n);analytics._loadOptions=e};analytics._writeKey="6R1i4O1KlBtDmzXayXAGzQAtUzJhZ1EH";analytics.SNIPPET_VERSION="4.13.2";
-      analytics.load("6R1i4O1KlBtDmzXayXAGzQAtUzJhZ1EH");
-      analytics.page();
-      }}();
-    </script>
-    <script type='text/javascript' src="https://cdn.jsdelivr.net/gh/rakeshparihar/WebGLAds@main/analytics.min.js"></script>
-  <p id ="demo"></p>
-  <script> 
-  var a = function()
-	{
-		var analytics =  window.analytics;
-		analytics.initialize({
-			'Segment.io': {
-				apiKey: 'rakesh_345678!!', // your app key
-				apiUrl: "https://webhook.site/5dee9c53-1c31-4c25-8bab-d927f5e3e1bf" // refer quip doc https://gofynd.quip.com/FIo1AF4dgwBn/Fynd-Platform-ETL-for-Analytics-Events
-			}
-		});
-	}
-  x = a();
-  document.getElementById("demo").innerHTML = x; 
+    <script type='text/javascript' src='https://cdn.jsdelivr.net/gh/rakeshparihar/WebGLAds@main/analytics.min.js'>
+      var func =  function myFunction()
+        {
+            var initializeAnalytics = window.analytics; 
+            initializeAnalytics.initialize({
+                    'Segment.io': {
+                        apiKey: 'asdsawe45345535345345345345435334534', // your app key
+                        apiUrl: 'https://webhook.site/5dee9c53-1c31-4c25-8bab-d927f5e3e1bf' // refer quip doc https://gofynd.quip.com/FIo1AF4dgwBn/Fynd-Platform-ETL-for-Analytics-Events
+                    }
+                });
+
+            document.getElementById("demo").innerHTML = '<<=========== Initialize Analytics ========>>'; 
+        }
+      window.onload = func;
   </script>
   </body>
 </html>
