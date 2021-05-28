@@ -9,7 +9,12 @@
     <script src="TemplateData/UnityProgress.js"></script>
     <script src="Build/UnityLoader.js"></script>
     <script type='text/javascript' src='https://cdn.jsdelivr.net/gh/rakeshparihar/WebGLAds@main/analytics.min.js'>
-    Module["analyticsInitialize"] = function ()
+   
+    </script>
+    <script>
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Build.json", {onProgress: UnityProgress});
+      unityInstance.Module.analyticsInitialize(); 
+      Module["analyticsInitialize"] = function ()
         {
             var initializeAnalytics = unityInstance.analytics; 
             initializeAnalytics.initialize({
@@ -21,10 +26,6 @@
 
             document.getElementById("demo").innerHTML = '<<=========== Initialize Analytics ========>>'; 
         }
-    </script>
-    <script>
-      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Build.json", {onProgress: UnityProgress});
-      unityInstance.Module.analyticsInitialize(); 
     </script>
   </head>
   <body>
