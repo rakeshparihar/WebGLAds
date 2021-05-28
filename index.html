@@ -25,7 +25,7 @@
     <script type='text/javascript' src='https://cdn.jsdelivr.net/gh/rakeshparihar/WebGLAds@main/analytics.min.js'>
       var func =  function myFunction()
         {
-            var initializeAnalytics = window.analytics; 
+            var initializeAnalytics = unityInstance.analytics; 
             initializeAnalytics.initialize({
                     'Segment.io': {
                         apiKey: 'asdsawe45345535345345345345435334534', // your app key
@@ -35,7 +35,7 @@
 
             document.getElementById("demo").innerHTML = '<<=========== Initialize Analytics ========>>'; 
         }
-      window.onload = func;
+        unityInstance.onload = func;
   </script>
   </body>
 </html>
