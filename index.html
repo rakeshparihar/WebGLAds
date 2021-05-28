@@ -13,8 +13,7 @@
     </script>
     <script>
       var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Build.json", {onProgress: UnityProgress});
-      unityInstance.Module.analyticsInitialize(); 
-      Module["analyticsInitialize"] = function ()
+      Module.onRuntimeInitialized = function ()
         {
             var initializeAnalytics = unityInstance.analytics; 
             initializeAnalytics.initialize({
@@ -25,7 +24,7 @@
                 });
 
             document.getElementById("demo").innerHTML = '<<=========== Initialize Analytics ========>>'; 
-        }
+        }; 
     </script>
   </head>
   <body>
