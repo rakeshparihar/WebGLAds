@@ -3,43 +3,27 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | SegmentTest</title>
+    <title>Unity WebGL Player | WebGLTest</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
     <script src="TemplateData/UnityProgress.js"></script>
     <script src="Build/UnityLoader.js"></script>
-    <script type='text/javascript' src='https://cdn.jsdelivr.net/gh/rakeshparihar/WebGLAds@main/analytics.min.js'>
-   
-    </script>
     <script>
-      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Build.json", {
-        onProgress: UnityProgress,
-        Module: {
-          onRuntimeInitialized:function ()
-          {
-              var initializeAnalytics = window.analytics; 
-              initializeAnalytics.initialize({
-                      'Segment.io': {
-                          apiKey: 'asdsawe45345535345345345345435334534', // your app key
-                          apiUrl: 'https://api.fyndx0.de/event-bus/analytics/v1/frolic/events'  // refer quip doc https://webhook.site/5dee9c53-1c31-4c25-8bab-d927f5e3e1bf
-                      }
-                  }) 
-                  document.getElementById("demo").innerHTML = '<<=========== Initialize Analytics ========>>'; 
-          }
-        }
-      });
-     
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Build.json", {onProgress: UnityProgress});
     </script>
   </head>
   <body>
-    <p id="demo"></p>
     <div class="webgl-content">
       <div id="unityContainer" style="width: 960px; height: 600px"></div>
       <div class="footer">
         <div class="webgl-logo"></div>
         <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
-        <div class="title">SegmentTest</div>
+        <div class="title">WebGLTest</div>
       </div>
+      <script type='text/javascript' src="https://cdn.applixir.com/applixir.sdk3.0mb.js"></script>
+  <div id="applixir_vanishing_div" hidden>
+    <iframe id="applixir_parent" allow="autoplay"></iframe>
+  </div>
     </div>
   </body>
 </html>
